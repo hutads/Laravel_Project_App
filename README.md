@@ -1,63 +1,231 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Project App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Веб-приложение, разработанное на PHP с использованием Laravel. Проект объединяет систему управления контентом, каталог игр и дополнительные пользовательские разделы.
 
-## About Laravel
+Проект создавался для практического изучения backend-разработки, архитектуры Laravel, работы с реляционными базами данных и современных инструментов разработки.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## О проекте
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Приложение представляет собой веб-платформу с несколькими функциональными разделами:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* **Публикации (Posts)** — создание, просмотр, редактирование и удаление публикаций.
+* **Каталог игр (Games)** — управление игровым каталогом и просмотр информации об играх.
+* **Категории (Categories)** — группировка публикаций по категориям.
+* **Теги (Tags)** — добавление тегов и организация связей с публикациями.
+* **Компьютерные мыши (Mice)** — отдельный раздел для управления каталогом устройств.
+* **Тренировки (Training)** — раздел для работы с записями тренировок.
+* **Пользователи (Users)** — регистрация и аутентификация пользователей.
+* **Административная панель** — управление публикациями с проверкой прав доступа на основе ролей пользователей.
 
-## Learning Laravel
+## Используемые технологии
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+| Технология     | Назначение                              |
+| -------------- | --------------------------------------- |
+| PHP 8.2        | Основной язык backend-разработки        |
+| Laravel 12     | PHP-фреймворк                           |
+| MySQL 8.0      | Реляционная база данных                 |
+| Eloquent ORM   | Работа с базой данных и связями моделей |
+| Blade          | Шаблонизатор Laravel                    |
+| Bootstrap 5    | Стилизация интерфейса                   |
+| JavaScript     | Клиентская логика                       |
+| Sass           | Препроцессор CSS                        |
+| Vite           | Сборка frontend-ресурсов                |
+| Docker Compose | Контейнеризация приложения              |
+| Nginx          | Веб-сервер                              |
+| Composer       | Управление PHP-зависимостями            |
+| npm            | Управление frontend-зависимостями       |
+| Git            | Контроль версий                         |
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Основной функционал
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 1. Управление публикациями
 
-## Laravel Sponsors
+Реализована работа с публикациями:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+* Создание новых публикаций.
+* Просмотр списка и отдельных публикаций.
+* Редактирование и удаление записей.
+* Привязка публикаций к категориям.
+* Добавление нескольких тегов к одной публикации.
+* Фильтрация по заголовку, содержимому и категории.
+* Пагинация результатов.
 
-### Premium Partners
+### 2. Каталог игр
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Реализован отдельный раздел для работы с игровым каталогом:
 
-## Contributing
+* Создание записей об играх.
+* Просмотр списка игр.
+* Просмотр информации об отдельной игре.
+* Редактирование и удаление записей.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 3. Работа с базой данных
 
-## Code of Conduct
+Для взаимодействия с базой данных используется Eloquent ORM.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+В проекте реализованы следующие типы связей:
 
-## Security Vulnerabilities
+* **One-to-Many:** одна категория может содержать множество публикаций.
+* **Many-to-Many:** одна публикация может иметь несколько тегов, а один тег может принадлежать нескольким публикациям.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Структура базы данных управляется с помощью миграций Laravel.
 
-## License
+Для создания тестовых данных используются Factories и Seeders.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# Egoru
-# Egoru
+Для отдельных моделей применяется Soft Deletes — механизм логического удаления записей без их физического удаления из базы данных.
+
+### 4. Аутентификация и авторизация
+
+В приложении используется механизм аутентификации Laravel.
+
+Для административной части реализовано промежуточное ПО (Middleware), проверяющее роль авторизованного пользователя.
+
+Доступ к административному разделу предоставляется пользователям с ролью `admin`.
+
+### 5. Фильтрация данных
+
+Для организации фильтрации публикаций используется отдельная структура классов:
+
+* `FilterInterface` — интерфейс фильтрации.
+* `AbstractFilter` — базовый абстрактный класс.
+* `PostFilter` — реализация фильтрации публикаций.
+
+Валидация входящих параметров выполняется с использованием Form Request.
+
+Такой подход позволяет отделить логику фильтрации от контроллеров.
+
+## Архитектура приложения
+
+При разработке использовались основные принципы архитектуры MVC:
+
+* **Models** — модели данных и связи между сущностями.
+* **Views** — представления на основе Blade.
+* **Controllers** — обработка HTTP-запросов и управление логикой приложения.
+* **Middleware** — промежуточная обработка запросов и проверка доступа.
+* **Requests** — валидация входящих данных.
+* **Filters** — отдельные классы для фильтрации данных.
+
+## Контейнеризация и окружение
+
+Для локального развёртывания приложения используется Docker Compose.
+
+Конфигурация включает три основных сервиса:
+
+| Сервис  | Описание                        |
+| ------- | ------------------------------- |
+| PHP App | Среда выполнения PHP-приложения |
+| MySQL   | Сервер базы данных              |
+| Nginx   | Обработка HTTP-запросов         |
+
+Приложение доступно локально по адресу `http://localhost:8876`.
+
+## Установка и запуск
+
+### Требования
+
+* Git
+* Docker Desktop
+* Docker Compose
+* Node.js и npm
+
+### 1. Клонирование репозитория
+
+```bash
+git clone https://github.com/hutads/Laravel_Project_App.git
+
+cd Laravel_Project_App
+```
+
+### 2. Настройка окружения
+
+Создать файл `.env` на основе примера:
+
+```bash
+cp .env.example .env
+```
+
+Настроить подключение к базе данных:
+
+```dotenv
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=first_project
+DB_USERNAME=root
+DB_PASSWORD=root
+```
+
+### 3. Запуск Docker-контейнеров
+
+```bash
+docker compose up -d --build
+```
+
+### 4. Установка PHP-зависимостей
+
+```bash
+docker compose exec app composer install
+```
+
+### 5. Генерация ключа приложения
+
+```bash
+docker compose exec app php artisan key:generate
+```
+
+### 6. Выполнение миграций
+
+```bash
+docker compose exec app php artisan migrate
+```
+
+### 7. Установка frontend-зависимостей
+
+```bash
+npm install
+```
+
+### 8. Сборка frontend-ресурсов
+
+```bash
+npm run build
+```
+
+### 9. Запуск приложения
+
+После выполнения всех шагов приложение будет доступно по адресу:
+
+http://localhost:8876
+
+## Полученные навыки
+
+В процессе разработки проекта были изучены и практически применены:
+
+* Разработка веб-приложений на PHP и Laravel.
+* Принципы MVC и организация структуры Laravel-приложений.
+* Работа с маршрутизацией и HTTP-методами.
+* Создание контроллеров и моделей.
+* Проектирование реляционных баз данных.
+* Работа с Eloquent ORM и связями между моделями.
+* Реализация CRUD-операций.
+* Валидация данных с помощью Form Request.
+* Разработка собственной системы фильтрации.
+* Работа с аутентификацией и авторизацией.
+* Создание Middleware для ограничения доступа.
+* Управление структурой БД через миграции.
+* Генерация тестовых данных с помощью Factories и Seeders.
+* Контейнеризация приложений с использованием Docker.
+* Работа с MySQL и Nginx.
+* Управление зависимостями через Composer и npm.
+
+## Статус проекта
+
+Проект является личной практической разработкой и продолжает развиваться в рамках изучения PHP и Laravel.
+
+Основной акцент сделан на backend-разработке, архитектуре приложения, работе с базами данных и освоении инструментов, используемых в современной веб-разработке.
+
+---
+
+**Автор:** [hutads](https://github.com/hutads)
+
+**Репозиторий:** [Laravel Project App](https://github.com/hutads/Laravel_Project_App)
