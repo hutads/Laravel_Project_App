@@ -1,0 +1,8 @@
+tmp/
+tmp/db/
+.env
+.env.*
+!.env.example
+/vendor
+/node_modules
+/public/build
